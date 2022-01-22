@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+:root{
+    --white: rgb(248, 247, 247);
+    --black:rgb(0,0,0);
+    --button: rgb(218, 162, 8);
+    --grey: rgb(180, 180, 180);
+}
+
+body, html{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--button), rgb(148, 86, 5), rgb(102, 58, 1));
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(Resourses/Montserrat/Montserrat-Regular.ttf);
+}
+
+#wrapper{
+    background: var(--white);
+    width: 400px;
+    margin: 40px auto;
+    min-height: 300px;
+    border: 2px solid var(--grey);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start_summ_input{
+    margin-top: 20px;
+    width: 50%;
+    border:none;
+    border-bottom: solid 2px var(--black);
+    background: transparent;
+    color: var(--black);
+    font-family: Montserrat;
+    text-align: center;
+}
+
+#start_summ_input:focus{
+    outline: none;
+}
+
+.err{
+    text-align: center;
+    font-size: 80%;
+    margin-top: 20px;
+    width: 60%;
+    padding: 0.5em 0.8em;
+    background: var(--black);
+    color: #e1e1e1;
+    border-radius: 20px;
+}
+#save{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    color: var(--black);
+    font-weight: 550;
+    background: var(--button);
+    margin-top: 20px;
+    font-family: Montserrat;
+   
+}
+
+#save:hover{
+    background: var(--black);
+    color: var(--white);
+   
+}
+
+#save:active{
+    background: var(--white);
+    color: var(--black);
+    border: solid 2px var(--black);
+}
+
+#operations:hover, #change:hover, #save_operation:hover{
+    background: var(--black);
+    color: var(--white);
+}
+
+#operations:active, #change:active, #save_operation:active{
+    background: var(--white);
+    color: var(--black);
+    border: solid 2px var(--black);
+}
+
+.start_summ{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+label{
+    color: var(--black);
+    font-size: 14pt;
+ }
+
+ .error{
+     color: var(--black);
+     font-size: 10pt;
+     margin: 10px auto;
+ }
+
+ .left{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: var(--black);
+     width: 80%;
+     font-size: 14pt;
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+
+ }
+
+ .left p{
+     
+     width: 100px;
+     margin: 0 auto 20px;
+     font-size: 16pt;
+ }
+
+ .left span{
+     width: 200px;
+     text-align: center;
+     margin: 5px;
+     border: solid var(--grey) 2px;
+
+ }
+
+ #operations{
+    border-radius: 30px;
+    border: none;
+    color: var(--black);
+    background: var(--button);
+    position: relative;
+    font-family: Montserrat;
+    font-weight: 550;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+ }
+
+ #change{
+    border-radius: 30px;
+    border: none;
+    color: var(--black);
+    background: var(--button);
+    position: relative;
+    font-family: Montserrat;
+    font-weight: 550;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ #buttons{
+     margin-top: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .hide{
+     display: none;
+ }
+ 
+ .pop_up_form{
+     top:40px;
+     width: 400px;
+     height: 450px;
+     background: var(--white);
+     display: none;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 30px;
+     position: absolute;
+     border: 2px solid var(--grey);
+     z-index: 2;
+     
+ }
+
+ #close{
+     background-image: url(Resourses/close.png);
+     background-size: cover;
+     height: 20px;
+     width: 20px;
+     position: absolute;
+     top:20px;
+     right: 20px;
+     transition: transform 0.2s ease-in-out;
+ }
+
+ #close:hover{
+     transform: rotate(45deg);
+ }
+
+ .operations_info{
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+
+ }
+
+ .operations_info p{
+    font-size: 18pt;
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.operations_info label{
+    font-size: 12pt;
+}
+
+#operation_value, #operation_description{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border:none;
+    border-bottom: solid 2px var(--black);
+    background: transparent;
+    color: var(--black);
+    font-family: Montserrat;
+    padding-left: 10px;
+}
+
+#operation_category{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 60%;
+    padding: 10px;
+    background: transparent;
+    border: solid 2px var(--black);
+    border-radius: 20px;
+}
+
+#operation_category:focus{
+  outline: none;
+}
+
+#operation_value:focus, #operation_description:focus{
+    outline: none;
+}
+
+#save_operation{
+    width: 80%;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    color: var(--black);
+    font-weight: 550;
+    background: var(--button);
+    margin-top: 20px;
+    font-family: Montserrat;
+    margin: 0 auto;
+}
+
+#operation_value::-webkit-input-placeholder, #operation_description::-webkit-input-placeholder{
+    color:rgb(160, 160, 160)
+}
+
+.operation_wrapper{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.operation_template{
+    width: 100%;
+    height: 200px;
+    background: var(--white);
+    border-radius: 30px;
+    border: 2px solid var(--grey);
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.delete{
+    background-image: url(Resourses/close.png);
+     background-size: cover;
+     height: 20px;
+     width: 20px;
+     position: absolute;
+     top:10px;
+     right: 20px;
+     transition: transform 0.2s ease-in-out;
+     cursor: pointer;
+}
+
+.delete:hover{
+    transform: rotate(45deg);
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    position: absolute;
+    top:30px;
+    left: 10px;
+}
+
+#info span{
+    margin-bottom: 20px;
+}
+
+#category{
+    color: var(--grey);
+    font-size: 12pt;
+}
+
+.operation_template:hover{
+    transform: translate(-5px, -2px);
+    transition: transform 0.3s ease-in-out;
+}
+
+#current_date{
+    font-size: 10pt;
+    color: var(--grey);
+}

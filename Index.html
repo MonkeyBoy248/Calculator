@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Дневник расходов</title>
+</head>
+<body>
+        <div id="wrapper">
+                <form class="start_summ">
+                    <label for="start_sum_input">Какой ваш бюджет на месяц?</label>
+                    <input type="text" id="start_summ_input" name="start_sum_input">
+                    <input type="button" id="save" value="Сохранить">
+                </form>
+                <div class="left hide">
+                    <p>Остаток</p>
+                    <span></span>
+                    <div id='buttons'>
+                        <input type="button" id="change" value="Изменить начальный бюджет">
+                        <input type="button" id="operations" value="Добавить финансовые операции">
+                    </div>
+                </div>
+        </div>
+        <div class="pop_up_form">
+            <span id="close"></span>
+            <form class="operations_info">
+                <p>Операция</p>
+                <label for="operation_value">Размер операции</label>
+                <input type="text" id="operation_value" name="operation_value" placeholder="+/- 300">
+                <label for="operation_description">Описание операции</label>
+                <input type="text" id="operation_description" name="operation_description" placeholder="Кофе">
+                <label for="operation_category">Категория операции</label>
+                <select id="operation_category" name="operation_category">
+                    <option value='Здоровье и красота'>Здоровье и красота</option>
+                    <option value='Транспорт'>Транспорт</option>
+                    <option value='Супермаркеты'>Супермаркеты</option>
+                    <option value='Кафе и рестораны'>Кафе и рестораны</option>
+                    <option value='Перевод'>Перевод</option>
+                </select>
+                <input type="button" id="save_operation" value="Сохранить">
+            </form>
+        </div>
+        <div class="operation_wrapper"></div>
+    <script src="calculator.js"></script>
+</body>
+</html>
